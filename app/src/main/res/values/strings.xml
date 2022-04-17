@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BottomNavigationBarFragments</string>
+    <string name="app_name">eLedgerv3</string>
     <string name="home">Home</string>
     <string name="Ledger">Ledger</string>
     <string name="Visualize">Visualize</string>
@@ -7,6 +7,29 @@
     <string name="Profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="amount">Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="what_s_this_spent_for">What\'s this spent for?</string>
+    <string name="enter_the_amount">enter the amount</string>
+    <string name="select_category">select category</string>
 
+
+    <string name="food">FOOD</string>
+    <string name="shopping">SHOPPING</string>
+    <string name="phone">PHONE</string>
+    <string name="health">HEALTH</string>
+    <string name="groceries">GROCERIES</string>
+    <string name="travel">TRAVEL</string>
+    <string name="fuel">FUEL</string>
+    <string name="education">EDUCATION</string>
+    <string name="electricity">ELECTRICITY</string>
+    <string name="bills">BILLS</string>
+    <string name="housing">HOUSING</string>
+    <string name="other">OTHER</string>
+    <string name="select_type">select type</string>
+    <string name="add">ADD</string>
+    <string name="select_date_and_time">select date and time</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
 
 </resources>

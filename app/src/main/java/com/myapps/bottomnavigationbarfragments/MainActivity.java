@@ -20,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.bodyContainer, new HomeFragment()).commit();
         bottomNavigationView.setSelectedItemId(R.id.home);
 
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
+        bottomNavigationView.setOnItemSelectedListener(item ->
+
+        {
 
             switch (item.getItemId()) {
                 case R.id.home:
@@ -59,10 +62,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
-
-
             return true;
         });
     }
+
+
 }

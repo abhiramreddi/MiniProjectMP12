@@ -3,17 +3,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/card_3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
     tools:context=".LedgerFragment">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/hey"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+            android:id="@+id/Demo2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tbgCheckedButton="@+id/choice_a">
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_a"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/credit"
+                android:textSize="18sp" />
+
+            <com.nex3z.togglebuttongroup.button.LabelToggle
+                android:id="@+id/choice_b"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/debit"
+                android:textSize="18sp" />
+
+        </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/hey"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/enter_amount">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputAmount"
+            android:drawableStart="@drawable/ic_currency"
+            android:drawablePadding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedDescription"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/outlinedAmount"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/what_s_this_spent_for">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_info"
+            android:drawablePadding="8dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/demo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/outlinedDescription"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/select_category">
+
+        <AutoCompleteTextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownHeight="200dp"
+            android:inputType="none"
+            android:drawableStart="@drawable/ic_category"
+            android:drawablePadding="8dp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/outlinedButton"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Ledger"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/add" />
+
+
+
 
 </RelativeLayout>
