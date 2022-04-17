@@ -17,15 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.bodyContainer, new HomeFragment()).commit();
         bottomNavigationView.setSelectedItemId(R.id.home);
-
-
         bottomNavigationView.setOnItemSelectedListener(item ->
 
         {
