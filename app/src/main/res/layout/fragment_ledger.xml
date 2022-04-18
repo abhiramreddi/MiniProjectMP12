@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="#ffffff"
     tools:context=".LedgerFragment">
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp">
 
         <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
@@ -21,8 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:tbgCheckedButton="@id/credit"
-            >
+            app:tbgCheckedButton="@id/credit">
 
             <com.nex3z.togglebuttongroup.button.LabelToggle
                 android:id="@+id/credit"
@@ -107,34 +106,37 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:textSize="18sp"
-        android:text="@string/select_date"
-        android:drawablePadding="8dp"
-        android:background="@drawable/date_time_outline_border"
+        android:id="@+id/tvDatePicker"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/demo"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/date_time_outline_border"
+        android:clickable="true"
+        android:drawablePadding="8dp"
+        android:focusable="true"
         android:padding="18sp"
-        android:layout_height="wrap_content"
+        android:text="@string/select_date"
+        android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_calender" />
 
     <TextView
-        android:textSize="18sp"
-        android:text="@string/select_time"
-        android:drawablePadding="8dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/date_time_outline_border"
+        android:id="@+id/tvTimePicker"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/demo"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
-        android:padding="18sp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/demo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/date_time_outline_border"
+        android:drawablePadding="8dp"
+        android:padding="18sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/select_time"
+        android:textSize="18sp"
         app:drawableStartCompat="@drawable/ic_time" />
-
-
-
 
 
     <Button
@@ -148,8 +150,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#FEDBD0"
-        android:textColor="#442C2E"
-        android:text="@string/add" />
+        android:text="@string/add"
+        android:textColor="#442C2E" />
 
 
 
