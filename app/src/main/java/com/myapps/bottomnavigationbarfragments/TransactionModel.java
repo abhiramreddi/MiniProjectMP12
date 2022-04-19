@@ -1,47 +1,66 @@
 package com.myapps.bottomnavigationbarfragments;
 
+import androidx.annotation.NonNull;
+
 public class TransactionModel {
-    private int id;
-    private String type;
-    private int Amount;
+    private Integer id;
+    private Integer amount;
     private String description;
     private String category;
+    private String type;
     private String date;
-
-    public int getAmount() {
-        return Amount;
-    }
-
-    public void setAmount(int amount) {
-        Amount = amount;
-    }
-
     private String time;
 
-    TransactionModel(int id, String type, String description, String category, String date, String time) {
+    @NonNull
+    @Override
+    public String toString() {
+        if (date.length() == 8) {
+            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n" +
+//                "                                                 " + type +
+                    "\non " + date +
+                    " @ " + time +
+                    "\t\t\t\t\t\t\t\t" + description + "ED"
+                    ;
+        } else if (date.length() == 9) {
+            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n" +
+//                "                                                 " + type +
+                    "\non " + date +
+                    " @ " + time +
+                    "\t\t\t\t\t\t\t" + description + "ED"
+                    ;
+        } else
+            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n " +
+//                "                                                 " + type +
+                    "\non " + date +
+                    " @ " + time +
+                    "\t\t\t\t\t\t" + description + "ED"
+                    ;
+    }
+
+    public TransactionModel(Integer id, Integer amount, String description, String category, String type, String date, String time) {
         this.id = id;
-        this.type = type;
+        this.amount = amount;
         this.description = description;
         this.category = category;
+        this.type = type;
         this.date = date;
         this.time = time;
     }
 
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     public String getDescription() {
@@ -60,6 +79,14 @@ public class TransactionModel {
         this.category = category;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getDate() {
         return date;
     }
@@ -75,6 +102,4 @@ public class TransactionModel {
     public void setTime(String time) {
         this.time = time;
     }
-
-
 }
