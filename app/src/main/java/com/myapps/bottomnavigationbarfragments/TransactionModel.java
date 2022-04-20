@@ -14,26 +14,29 @@ public class TransactionModel {
     @NonNull
     @Override
     public String toString() {
-        if (date.length() == 8) {
-            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n" +
-//                "                                                 " + type +
-                    "\non " + date +
+        if (date.length() == 8)
+            return "                                                              ₹ " + amount +
+                    "\n " + description +
+                    "\n on " + date +
                     " @ " + time +
-                    "\t\t\t\t\t\t\t\t" + description + "ED"
+                    "                " + type + "\n" + " "+ category
+
                     ;
-        } else if (date.length() == 9) {
-            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n" +
-//                "                                                 " + type +
-                    "\non " + date +
+        else if (date.length() == 9)
+            return "                                                              ₹ " + amount +
+                    "\n " + description +
+                    "\n on " + date +
                     " @ " + time +
-                    "\t\t\t\t\t\t\t" + description + "ED"
+                    "              " + type + "\n" + " "+ category
+
                     ;
-        } else
-            return category + "\n" + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t₹ " + amount + "\n " +
-//                "                                                 " + type +
-                    "\non " + date +
+        else
+            return "                                                              ₹ " + amount +
+                    "\n " + description +
+                    "\n on " + date +
                     " @ " + time +
-                    "\t\t\t\t\t\t" + description + "ED"
+                    "             " + type + "\n" + " "+ category
+
                     ;
     }
 

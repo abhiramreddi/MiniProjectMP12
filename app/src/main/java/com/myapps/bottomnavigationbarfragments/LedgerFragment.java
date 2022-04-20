@@ -139,26 +139,29 @@ public class LedgerFragment extends Fragment {
             String date = dateForTextView;
             String time = tvTime.getText().toString();
 
-            if(type.length() == 0 || amount.length() == 0 || desc.length() == 0 || categ.length() == 0 || date.length() == 0|| time.length() == 0){
-                Toast.makeText(getActivity(), "Fill all the fields", Toast.LENGTH_SHORT).show();
+            try {
+                if(type.length() == 0 || amount.length() == 0 || desc.length() == 0 || categ.length() == 0 || date.length() == 0|| time.length() == 0){
+                    Toast.makeText(getActivity(), "Fill all the fields", Toast.LENGTH_SHORT).show();
 
-            }else{
-                TransactionModel transactionModel;
+                }else{
+                    TransactionModel transactionModel;
 
-                try {
-                    transactionModel = new TransactionModel(-1, Integer.parseInt(amount), desc, categ, type, date, time);
-                } catch (Exception e) {
-                    transactionModel = new TransactionModel(-1, 0, "not specified", "not specified", "not specified", "not specified", "not specifies");
+                    try {
+                        transactionModel = new TransactionModel(-1, Integer.parseInt(amount), desc, categ, type, date, time);
+                    } catch (Exception e) {
+                        transactionModel = new TransactionModel(-1, 0, "not specified", "not specified", "not specified", "not specified", "not specifies");
+                    }
+
+                    DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
+                    boolean success = dataBaseHelper.addOne(transactionModel);
+                    if (success)
+                        Toast.makeText(getActivity(), "Data Added Successfully", Toast.LENGTH_SHORT).show();
+                    else
+                        Toast.makeText(getActivity(), "Data Not Added", Toast.LENGTH_SHORT).show();
                 }
-
-                DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
-                boolean success = dataBaseHelper.addOne(transactionModel);
-                if (success)
-                    Toast.makeText(getActivity(), "Data Added Successfully", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(getActivity(), "Data Not Added", Toast.LENGTH_SHORT).show();
+            }catch (NullPointerException nullPointerException){
+                Toast.makeText(requireActivity().getApplicationContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
             }
-
 
         });
 
