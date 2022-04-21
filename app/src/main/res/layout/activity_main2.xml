@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/alatsi"
+        android:gravity="center"
+        android:text="@string/split_and_maintain_n_t_t_bills_in_trips"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/continue_the_old_trip"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip"
+        android:layout_below="@id/button2"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

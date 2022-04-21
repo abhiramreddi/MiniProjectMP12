@@ -1,7 +1,6 @@
-package com.myapps.bottomnavigationbarfragments;
+package com.myapps.bottomnavigationbarfragments.LedgerDOA;
 
 import androidx.annotation.NonNull;
-
 public class TransactionModel {
     private Integer id;
     private Integer amount;
@@ -19,7 +18,7 @@ public class TransactionModel {
                     "\n " + description +
                     "\n on " + date +
                     " @ " + time +
-                    "                " + type + "\n" + " "+ category
+                    "                " + type + "\n" + " " + category
 
                     ;
         else if (date.length() == 9)
@@ -27,7 +26,7 @@ public class TransactionModel {
                     "\n " + description +
                     "\n on " + date +
                     " @ " + time +
-                    "              " + type + "\n" + " "+ category
+                    "              " + type + "\n" + " " + category
 
                     ;
         else
@@ -35,7 +34,7 @@ public class TransactionModel {
                     "\n " + description +
                     "\n on " + date +
                     " @ " + time +
-                    "             " + type + "\n" + " "+ category
+                    "             " + type + "\n" + " " + category
 
                     ;
     }

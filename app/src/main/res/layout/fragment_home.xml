@@ -1,37 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".Fragments.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/testTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/testTextview"
+                android:fontFamily="@font/alatsi"
+                android:text="@string/total_bal"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/testTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/alatsi"
+                android:text="@string/home"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/balance_Status"
+                android:layout_below="@id/testTextview"
+                android:layout_marginEnd="30dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/testTextview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/testTextview"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/alatsi"
+                android:text="@string/now_visualize_your_data_in_charts"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/button1"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/testTextview3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/hey"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:outlineAmbientShadowColor="@color/card_5"
+                android:src="@drawable/chart_shortcut" />
+
+
+            <TextView
+                android:id="@+id/testTextview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/alatsi"
+                android:text="@string/maintain_a_record_of_bills_in_a_trip"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/button"
+                android:layout_width="290dp"
+                android:layout_height="210dp"
+                android:layout_below="@id/testTextview4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/hey"
+                android:elevation="10dp"
+                android:focusable="true"
+                android:src="@drawable/money_friends" />
 
 
 
-    <TextView
-        android:id="@+id/testTextView1"
-        android:layout_toStartOf="@id/testTextview"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Bal : ₹"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
+        </RelativeLayout>
+    </ScrollView>
 
-
-    <TextView
-        android:id="@+id/testTextview"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
-
-</RelativeLayout>
+</LinearLayout>

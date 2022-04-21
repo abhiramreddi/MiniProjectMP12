@@ -38,5 +38,21 @@
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="transactions_history">Transactions History</string>
+    <string name="enter_amount_for_bill_split">Enter amount</string>
+    <string name="continue_the_old_trip">Continue the old trip</string>
+    <string name="new_trip">new trip</string>
+    <string name="add_member">add a member</string>
+    <string name="pay">Pay</string>
+    <string name="show_all_payments">show all payments</string>
+    <string name="split_the_bill">split the bill</string>
+    <string name="enter_name">enter name</string>
+    <string name="total_bal">Total Bal : ₹</string>
+    <string name="split_bill">split bill</string>
+    <string name="hey">hey</string>
+    <string name="now_visualize_your_data_in_charts">now visualize your data in charts</string>
+    <string name="maintain_a_record_of_bills_in_a_trip">maintain a record of bills in a trip</string>
+    <string name="split_and_maintain_n_t_t_bills_in_trips">Split and Maintain \n Bills in Trips</string>
+    <string name="all_transactions">All Transactions</string>
+    <string name="save">save</string>
 
 </resources>

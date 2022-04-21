@@ -1,13 +1,18 @@
-package com.myapps.bottomnavigationbarfragments;
+package com.myapps.bottomnavigationbarfragments.LedgerDOA;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.myapps.bottomnavigationbarfragments.Fragments.HistoryFragment;
+import com.myapps.bottomnavigationbarfragments.Fragments.HomeFragment;
+import com.myapps.bottomnavigationbarfragments.Fragments.LedgerFragment;
+import com.myapps.bottomnavigationbarfragments.Fragments.ProfileFragment;
+import com.myapps.bottomnavigationbarfragments.Fragments.VisualizeFragment;
+import com.myapps.bottomnavigationbarfragments.R;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

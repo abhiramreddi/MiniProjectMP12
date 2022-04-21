@@ -10,15 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BottomNavigationBarFragments">
         <activity
-            android:screenOrientation="portrait"
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LedgerDOA.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Split"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".Home"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".Pay"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".ShowAllTransactions"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".AddMember"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

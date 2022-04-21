@@ -1,4 +1,4 @@
-package com.myapps.bottomnavigationbarfragments;
+package com.myapps.bottomnavigationbarfragments.LedgerDOA;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import com.myapps.bottomnavigationbarfragments.Fragments.VisualizeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,8 +41,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         String createTableStatement = "CREATE TABLE " + DATABASE_NAME + "(" + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT," + COLUMN_AMOUNT + " INT ," + COLUMN_DESCRIPTION + " TEXT," + COLUMN_CATEGORY + " TEXT," + COLUMN_TYPE + " TEXT, " + COLUMN_DATE + " TEXT ," + COLUMN_TIME + " TEXT)";
         sqLiteDatabase.execSQL(createTableStatement);
-
-
     }
 
     @Override
@@ -69,9 +69,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return insert != -1;
     }
 
-    public void method_For_Values(int[] array_ra_pumka) {
+    public void method_For_Values(int[] test_vals) {
         VisualizeFragment visualize = new VisualizeFragment();
-        visualize.vals = array_ra_pumka;
+        visualize.vals = test_vals;
 
     }
 
@@ -86,7 +86,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getDebit(){
+    public int getDebit() {
         SQLiteDatabase db = this.getWritableDatabase();
         @SuppressLint("Recycle") Cursor cursor = db.rawQuery("SELECT SUM(Amount) as Total1 FROM Payments WHERE Type = 'DEBIT'", null);
         if (cursor.moveToFirst())
@@ -94,7 +94,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         return debit_total;
     }
-
 
     public List<TransactionModel> getAll() {
 
@@ -114,7 +113,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         int bills_Total = 0;
         int housing_Total = 0;
         int fuel_Total = 0;
-        int others_Total = 0;
         int health_Total = 0;
 
         if (cursor.moveToFirst()) {
@@ -127,53 +125,46 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 String transactionDate = cursor.getString(5);
                 String transactionTime = cursor.getString(6);
 
-
-                switch (transactionCategory) {
-                    case "FOOD":
-                        food_Total += transactionAmount;
-                        break;
-                    case "SHOPPING":
-                        shopping_Total += transactionAmount;
-                        break;
-                    case "PHONE":
-                        phone_Total += transactionAmount;
-                        break;
-                    case "HEALTH":
-                        health_Total += transactionAmount;
-                        break;
-                    case "GROCERIES":
-                        groceries_Total += transactionAmount;
-                        break;
-                    case "TRAVEL":
-                        travel_Total += transactionAmount;
-                        break;
-                    case "FUEL":
-                        fuel_Total += transactionAmount;
-                        break;
-                    case "EDUCATION":
-                        education_Total += transactionAmount;
-                        break;
-                    case "ELECTRICITY":
-                        electricity_Total += transactionAmount;
-                        break;
-                    case "BILLS":
-                        bills_Total += transactionAmount;
-                        break;
-                    case "HOUSING":
-                        housing_Total += transactionAmount;
-                        break;
-                    case "OTHER":
-                        others_Total += transactionAmount;
-                        break;
+                if(transactionType.equals("DEBIT")){
+                    switch (transactionCategory) {
+                        case "FOOD":
+                            food_Total += transactionAmount;
+                            break;
+                        case "SHOPPING":
+                            shopping_Total += transactionAmount;
+                            break;
+                        case "PHONE":
+                            phone_Total += transactionAmount;
+                            break;
+                        case "HEALTH":
+                            health_Total += transactionAmount;
+                            break;
+                        case "GROCERIES":
+                            groceries_Total += transactionAmount;
+                            break;
+                        case "TRAVEL":
+                            travel_Total += transactionAmount;
+                            break;
+                        case "FUEL":
+                            fuel_Total += transactionAmount;
+                            break;
+                        case "EDUCATION":
+                            education_Total += transactionAmount;
+                            break;
+                        case "ELECTRICITY":
+                            electricity_Total += transactionAmount;
+                            break;
+                        case "BILLS":
+                            bills_Total += transactionAmount;
+                            break;
+                        case "HOUSING":
+                            housing_Total += transactionAmount;
+                            break;
+                    }
                 }
-
-                values = new int[]{food_Total, shopping_Total, phone_Total, health_Total, groceries_Total, travel_Total, fuel_Total, education_Total, electricity_Total, bills_Total, housing_Total, others_Total};
-
+                values = new int[]{food_Total, shopping_Total, phone_Total, health_Total, groceries_Total, travel_Total, fuel_Total, education_Total, electricity_Total, bills_Total, housing_Total};
                 method_For_Values(values);
-
-
                 TransactionModel transactionModel = new TransactionModel(transactionID, transactionAmount, transactionDescription, transactionCategory, transactionType, transactionDate, transactionTime);
-
                 returnList.add(transactionModel);
 
             } while (cursor.moveToNext());
