@@ -125,7 +125,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 String transactionDate = cursor.getString(5);
                 String transactionTime = cursor.getString(6);
 
-                if(transactionType.equals("DEBIT")){
+                if (transactionType.equals("DEBIT")) {
                     switch (transactionCategory) {
                         case "FOOD":
                             food_Total += transactionAmount;
@@ -177,6 +177,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         return returnList;
 
+    }
+
+    public ArrayList<TransactionModel> getAllLocalUser() {
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<TransactionModel> list = new ArrayList<>();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + DATABASE_NAME + " ORDER BY " + COLUMN_ID + " DESC", null);
+        if (cursor.moveToFirst()) {
+            do {
+                int transactionID = cursor.getInt(0);
+                int transactionAmount = cursor.getInt(1);
+                String transactionDescription = cursor.getString(2);
+                String transactionCategory = cursor.getString(3);
+                String transactionType = cursor.getString(4);
+                String transactionDate = cursor.getString(5);
+                String transactionTime = cursor.getString(6);
+
+                list.add(new TransactionModel(transactionID, transactionAmount, transactionDescription, transactionCategory, transactionType, transactionDate, transactionTime));
+            } while (cursor.moveToFirst());
+        }
+        return list;
     }
 
 

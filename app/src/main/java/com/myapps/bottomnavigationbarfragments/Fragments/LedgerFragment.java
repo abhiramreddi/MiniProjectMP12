@@ -46,7 +46,7 @@ public class LedgerFragment extends Fragment {
 
     AutoCompleteTextView Category;
     ArrayAdapter<String> adapterCategories;
-    String[] categories = {"FOOD", "SHOPPING", "PHONE", "HEALTH", "GROCERIES", "TRAVEL", "FUEL", "EDUCATION", "ELECTRICITY", "BILLS", "HOUSING", "OTHER"};
+    String[] categories = {"FOOD", "SHOPPING", "PHONE", "HEALTH", "GROCERIES", "TRAVEL", "FUEL", "EDUCATION", "ELECTRICITY", "BILLS", "HOUSING", "INCOME"};
     SingleSelectToggleGroup type;
     TextView tvDate, tvTime;
     DatePickerDialog datePickerDialog;

@@ -5,5 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
 
+<!--    <Button-->
+<!--        android:id="@+id/downloadStatement"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="@string/download_statement"-->
+<!--        android:textAllCaps="false" />-->
 
 </RelativeLayout>

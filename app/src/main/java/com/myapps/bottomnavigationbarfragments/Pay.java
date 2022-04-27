@@ -14,7 +14,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Pay extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-
     String[] courses;
     EditText amount;
     String name;

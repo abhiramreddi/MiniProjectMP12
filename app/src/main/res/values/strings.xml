@@ -8,8 +8,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="amount">Amount</string>
-    <string name="enter_amount">Enter Amount</string>
-    <string name="what_s_this_spent_for">What\'s this spent for?</string>
+    <string name="enter_amount">enter amount</string>
+    <string name="what_s_this_spent_for">enter a description</string>
     <string name="enter_the_amount">enter the amount</string>
     <string name="select_category">select category</string>
 
@@ -54,5 +54,6 @@
     <string name="split_and_maintain_n_t_t_bills_in_trips">Split and Maintain \n Bills in Trips</string>
     <string name="all_transactions">All Transactions</string>
     <string name="save">save</string>
+    <string name="download_statement">Download statement</string>
 
 </resources>

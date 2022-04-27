@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:fontFamily="@font/alatsi"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:gravity="center"
         android:text="@string/split_and_maintain_n_t_t_bills_in_trips"
         android:textColor="@color/black"

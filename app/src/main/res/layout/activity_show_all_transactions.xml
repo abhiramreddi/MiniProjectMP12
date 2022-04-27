@@ -9,7 +9,7 @@
         android:id="@+id/testTitle"
         android:layout_width="match_parent"
         android:text="@string/all_transactions"
-        android:fontFamily="@font/alatsi"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:textSize="30sp"
         android:gravity="center"
         android:textColor="@color/black"
