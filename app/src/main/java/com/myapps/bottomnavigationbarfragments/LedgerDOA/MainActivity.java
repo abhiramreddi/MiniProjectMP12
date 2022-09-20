@@ -10,7 +10,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.myapps.bottomnavigationbarfragments.Fragments.HistoryFragment;
 import com.myapps.bottomnavigationbarfragments.Fragments.HomeFragment;
 import com.myapps.bottomnavigationbarfragments.Fragments.LedgerFragment;
-import com.myapps.bottomnavigationbarfragments.Fragments.ProfileFragment;
 import com.myapps.bottomnavigationbarfragments.Fragments.VisualizeFragment;
 import com.myapps.bottomnavigationbarfragments.R;
 
@@ -57,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
                     fragment4 = new HistoryFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.bodyContainer, fragment4).commit();
                     break;
-                case R.id.profile:
-                    Fragment fragment5;
-                    fragment5 = new ProfileFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.bodyContainer, fragment5).commit();
-                    break;
+//                case R.id.profile:
+//                    Fragment fragment5;
+//                    fragment5 = new ProfileFragment();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.bodyContainer, fragment5).commit();
+//                    break;
             }
 
 

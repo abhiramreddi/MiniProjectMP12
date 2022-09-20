@@ -22,11 +22,11 @@
         android:icon="@drawable/ic_visualize"
         android:enabled="true"
         android:title="@string/Visualize" />
-    <item
-        android:id="@+id/profile"
-        android:icon="@drawable/ic_profile"
-        android:enabled="true"
-        android:title="@string/Profile" />
+<!--    <item-->
+<!--        android:id="@+id/profile"-->
+<!--        android:icon="@drawable/ic_profile"-->
+<!--        android:enabled="true"-->
+<!--        android:title="@string/Profile" />-->
 
 
 </menu>
