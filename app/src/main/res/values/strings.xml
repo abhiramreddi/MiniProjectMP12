@@ -55,5 +55,9 @@
     <string name="all_transactions">All Transactions</string>
     <string name="save">save</string>
     <string name="download_statement">Download statement</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="todo">TODO</string>
 
 </resources>

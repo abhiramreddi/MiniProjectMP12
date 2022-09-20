@@ -4,8 +4,8 @@
     package="com.myapps.bottomnavigationbarfragments">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,9 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BottomNavigationBarFragments">
         <activity
-            android:name=".LedgerDOA.MainActivity"
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/Theme.BottomNavigationBarFragments.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,35 +27,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Split"
-            android:screenOrientation="fullSensor">
+            android:name=".LedgerDOA.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
 
         </activity>
+        <activity
+            android:name=".Split"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MainActivity2"
-            android:screenOrientation="fullSensor">
-
-        </activity>
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Home"
-            android:screenOrientation="fullSensor">
-
-        </activity>
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Pay"
-            android:screenOrientation="fullSensor">
-
-        </activity>
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ShowAllTransactions"
-            android:screenOrientation="fullSensor">
-
-        </activity>
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".AddMember"
-            android:screenOrientation="fullSensor">
-
-        </activity>
+            android:screenOrientation="fullSensor" />
 
         <meta-data
             android:name="preloaded_fonts"

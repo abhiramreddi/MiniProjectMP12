@@ -26,4 +26,17 @@
         <item name="colorPrimary">#FEDBD0</item>
         <item name="colorOnPrimary">#442C2E</item>
     </style>
+
+    <style name="Theme.BottomNavigationBarFragments.Fullscreen" parent="Theme.BottomNavigationBarFragments">
+        <item name="android:actionBarStyle">
+            @style/Widget.Theme.BottomNavigationBarFragments.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.BottomNavigationBarFragments.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>
